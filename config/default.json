@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb://localhost:27017/finance_tracker_server",
+  "authentication": {
+    "secret": "ff56fcb7193b7c4dd18e63ad0f9f5a26f013ef56b6d445e436cb4f5203c3ba2ece5c8ad1b893ab810c827a40aaa138060939bca09c56742fc69ff7e89db872782096e7bed10ca853df455dd22661f8c2e1d81a9fb2288367a5646c5afadefd3e9e411841d9434753d2d837eb509c134c1e9e363e4cf09c38fef62808411e7a0ea16089855a46f17a1194c3ac04c2d50cd1b69b877fe63e25dd7f5a37784c86dadb0d020282bdb10e91ca7f286cbbf6e7698028dd1842e7a8a29071d1149ff5e779ffc2081969a18db6d5907ac5945734f85ef0069f5f124e562ace45ff77028aa0b15af2ab936df24c5b8b8812282b44a9543a37119c9ad0509764759900dad5",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
+}
