@@ -1,6 +1,7 @@
 const authentication = require('@feathersjs/authentication');
 const jwt = require('@feathersjs/authentication-jwt');
 const local = require('@feathersjs/authentication-local');
+const _ = require('lodash');
 
 
 module.exports = function (app) {
@@ -17,11 +18,17 @@ module.exports = function (app) {
   app.service('authentication').hooks({
     before: {
       create: [
-        authentication.hooks.authenticate(config.strategies)
+        authentication.hooks.authenticate(['jwt', 'local'])
       ],
       remove: [
         authentication.hooks.authenticate('jwt')
       ]
+    },
+    after: {
+      create: [(context) => {
+        context.result.user = _.omit(context.params.user, ['password']);
+      }]
     }
   });
 };
+
