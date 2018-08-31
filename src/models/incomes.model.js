@@ -5,7 +5,7 @@
 // for more of what you can do here.
 module.exports = function (app) {
 
-  const earning = require('./earning.model')(app);
+  // const earning = require('./earning.model')(app);
 
   const mongooseClient = app.get('mongooseClient');
 
@@ -34,7 +34,7 @@ module.exports = function (app) {
     /**
      * list of incomes, paychecks misc
      */
-    earnings: {type: [earning], required: true},
+    earnings: {type: Number, required: true},
 
     createdAt: {type: Date, default: Date.now()},
     updatedAt: {type: Date, default: Date.now()},

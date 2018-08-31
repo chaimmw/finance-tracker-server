@@ -26,6 +26,8 @@ module.exports = function (app) {
     },
     after: {
       create: [(context) => {
+
+        // send user record with result to find users data
         context.result.user = _.omit(context.params.user, ['password']);
       }]
     }
