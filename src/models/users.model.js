@@ -10,7 +10,7 @@ module.exports = function (app) {
     lastName: {type: String, required: true},
     username: {type: String, required: true},
     email: {type: String, unique: true},
-    password: { type: String },
+    password: {type: String, required: true},
 
 
     createdAt: {type: Date, default: Date.now()},

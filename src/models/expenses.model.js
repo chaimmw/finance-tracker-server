@@ -18,7 +18,7 @@ module.exports = function (app) {
      * which month expenses for, short name of month
      * Jan, Feb, Mar etc
      */
-    month: {type: String, required: true},
+    month: {type: Number, required: true},
 
     /**
      * which year expenses were for

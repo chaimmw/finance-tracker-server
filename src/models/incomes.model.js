@@ -24,7 +24,7 @@ module.exports = function (app) {
      * short name of month
      * Jan, Feb, Mar etc.
      */
-    month: {type: String, required: true},
+    month: {type: Number, required: true},
 
     /**
      * which year salary was received for
