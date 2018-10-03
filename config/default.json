@@ -30,5 +30,14 @@
       "usernameField": "email",
       "passwordField": "password"
     }
+  },
+  "oauth2":{
+    "clientId": "296552965285-5r2gpfn17ak6es8ab3avoidibbuihnvf.apps.googleusercontent.com",
+    "clientSecret": "ZEaOOaELVnHpV1yL8fdD2M4H",
+    "refreshToken": "1/AuKTjUOjQxEXR_uYH31X_7ldWqguIph8nHsP6AebzF8"
+  },
+  "email": "chaimmw86@gmail.com",
+  "sparkpost": {
+    "apiKey": "f9ab23973f1db9638256c62119a15246fbeec16a"
   }
 }
