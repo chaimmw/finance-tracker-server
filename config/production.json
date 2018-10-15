@@ -1,4 +1,5 @@
 {
   "host": "finance-tracker-server-app.feathersjs.com",
-  "port": "PORT"
+  "port": "PORT",
+  "mongodb": "mongodb://chaimm:cmducks86@ds131903.mlab.com:31903/finance-tracker"
 }
