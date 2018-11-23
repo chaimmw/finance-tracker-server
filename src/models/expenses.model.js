@@ -18,13 +18,18 @@ module.exports = function (app) {
      * which month expenses for, short name of month
      * Jan, Feb, Mar etc
      */
-    month: {type: Number, required: true},
+    // month: {type: Number, required: true},
 
     /**
      * which year expenses were for
      */
-    year: {type: Number, required: true},
+    // year: {type: Number, required: true},
 
+    /**
+     * date saved to begininng of month
+     */
+    date: {type: Date, required: true},
+    
     /**
      *  food, groceries
      */

@@ -24,12 +24,17 @@ module.exports = function (app) {
      * short name of month
      * Jan, Feb, Mar etc.
      */
-    month: {type: Number, required: true},
+    // month: {type: Number, required: true},
 
     /**
      * which year salary was received for
      */
-    year: {type: Number, required: true},
+    // year: {type: Number, required: true},
+
+     /**
+     * date saved to begininng of month
+     */
+    date: {type: Date, required: true},
 
     /**
      * list of incomes, paychecks misc
